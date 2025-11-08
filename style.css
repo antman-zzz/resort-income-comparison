@@ -1,0 +1,311 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+header {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: fit-content;
+}
+
+.departure-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.departure-container input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#get-location-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+#get-location-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#sort-btn {
+    background-color: #2ecc71;
+}
+
+#sort-btn:hover {
+    background-color: #27ae60;
+}
+
+#job-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.job-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 300px; /* Allow cards to grow and shrink */
+    max-width: 420px; /* But not get too large */
+}
+
+.card-header {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.job-title {
+    width: 100%;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.job-title::placeholder {
+    color: #bdc3c7;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.input-group {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-group-inline {
+    flex-wrap: nowrap;
+}
+
+.input-group-inline label {
+    width: 50px;
+}
+
+.input-group-inline input {
+    max-width: 60px;
+}
+
+.input-group label {
+    width: 80px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 40px;
+}
+
+.input-group input::placeholder {
+    color: #bdc3c7;
+}
+
+.input-group span {
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+.or-text {
+    margin: 0 10px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.food-daily-input-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.food-unit-value {
+    max-width: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.unit-toggle-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.unit-option {
+    padding: 2px 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.unit-option.active {
+    background-color: #6c757d;
+    color: white;
+}
+
+.unit-separator {
+    padding: 2px 0;
+    color: #ccc;
+}
+
+.details-panel {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.details-panel.is-visible {
+    display: block;
+}
+
+.details-toggle-btn {
+    background-color: #f0f0f0; /* Light grey */
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.details-toggle-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.card-footer {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    border-radius: 0 0 8px 8px;
+}
+
+.result-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.result-group label {
+    font-weight: bold;
+}
+
+.result {
+    font-weight: bold;
+}
+
+.effective-hourly-wage {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.map-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #95a5a6;
+    border: 2px solid transparent;
+}
+
+.map-btn:hover {
+    background-color: #7f8c8d;
+}
+
+.map-btn.ready {
+    background-color: #90ee90; /* lightgreen */
+    color: #333;
+}
+
+.map-btn.ready:hover {
+    background-color: #7adc7a;
+}
+
+.map-btn.error {
+    border: 2px solid #ff8a80; /* light-red */
+    color: #ff8a80;
+    background-color: #fff;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #job-cards-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .job-card {
+        width: 75vw;
+        flex-shrink: 0;
+    }
+}

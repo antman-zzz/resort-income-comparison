@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リゾートバイト給与比較サイト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏝️ リゾートバイト給与比較サイト</h1>
+        <div class="top-controls">
+            <div class="departure-container">
+                <label for="departure">出発地点:</label>
+                <input type="text" id="departure" placeholder="例：東京駅">
+                <button id="get-location-btn">現在地</button>
+            </div>
+            <div class="action-buttons">
+                <button id="add-job-btn">＋ 求人を追加</button>
+                <button id="sort-btn">実質時給の高い順</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="job-cards-container">
+            <!-- 求人カードはここに追加されます -->
+        </div>
+    </main>
+
+    <template id="job-card-template">
+        <div class="job-card">
+            <div class="card-header">
+                <input type="text" class="job-title" placeholder="仕事先">
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>時給:</label>
+                    <input type="number" class="hourly-wage" placeholder="時給を入力"><span>円</span>
+                </div>
+                <div class="input-group">
+                    <label>寮費:</label>
+                    <input type="number" class="dorm-fee-monthly" placeholder="月額"><span>円/月</span>
+                    <button type="button" class="details-toggle-btn dorm-details-toggle">詳細</button>
+                </div>
+                <div class="details-panel dorm-details-panel">
+                    <div class="input-group input-group-inline">
+                        <input type="number" class="dorm-fee-daily" placeholder="金額"><span>円/</span>
+                        <select class="days-selector dorm-days-selector">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <span>日</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>水光熱費:</label>
+                    <input type="number" class="utilities-fee" placeholder="金額を入力"><span>円/月</span>
+                </div>
+                <div class="input-group">
+                    <label>食費:</label>
+                    <input type="number" class="food-cost-monthly" placeholder="月額"><span>円/月</span>
+                    <button type="button" class="details-toggle-btn food-details-toggle">詳細</button>
+                </div>
+                <div class="details-panel food-details-panel">
+                    <div class="input-group food-daily-input-group">
+                        <input type="number" class="food-cost-daily" placeholder="金額"><span>円/</span>
+                        <input type="number" class="food-unit-value" value="30" min="1">
+                        <div class="unit-toggle-container">
+                            <span class="unit-option active" data-unit="日">日</span>
+                            <span class="unit-separator">/</span>
+                            <span class="unit-option" data-unit="回">回</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group transport-group">
+                    <label>交通費:</label>
+                    <span>支給</span><input type="number" class="transport-provided" placeholder="金額"><span>円/</span>
+                    <span>支払</span><input type="number" class="transport-paid" placeholder="金額"><span>円</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h3>計算結果</h3>
+                <div class="result-group">
+                    <label>月収:</label>
+                    <span class="monthly-income result">0</span>円
+                </div>
+                <div class="result-group">
+                    <label>実質時給:</label>
+                    <span class="effective-hourly-wage result">0</span>円
+                </div>
+                <div class="result-group">
+                    <label>交通費:</label>
+                    <span class="transport-cost result">0</span>円
+                </div>
+                <button class="map-btn">ルートと料金を確認</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
