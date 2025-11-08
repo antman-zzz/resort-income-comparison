@@ -16,6 +16,8 @@ header {
 h1 {
     color: #2c3e50;
     margin-bottom: 10px;
+    font-size: clamp(1.2rem, 5vw, 2.2rem);
+    white-space: nowrap;
 }
 
 .top-controls {
@@ -293,10 +295,6 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
     #job-cards-container {
         flex-wrap: nowrap;
         overflow-x: auto;
