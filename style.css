@@ -304,8 +304,44 @@ button:hover {
         padding: 10px;
     }
 
-    .job-card {
-        width: 75vw;
-        flex-shrink: 0;
+        .job-card {
+
+            width: 75vw;
+
+            flex-shrink: 0;
+
+        }
+
     }
-}
+
+    
+
+    .ad-container {
+
+        margin: 20px auto;
+
+        padding: 15px;
+
+        border: 1px solid #ddd;
+
+        text-align: center;
+
+        max-width: 90%;
+
+    }
+
+    
+
+    .ad-label {
+
+        display: block;
+
+        margin-bottom: 10px;
+
+        font-size: 0.9em;
+
+        color: #888;
+
+    }
+
+    
