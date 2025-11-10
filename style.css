@@ -332,14 +332,60 @@ button:hover {
 
     .ad-label {
 
-        display: block;
+    
 
-        margin-bottom: 10px;
+            display: block;
 
-        font-size: 0.9em;
+    
 
-        color: #888;
+            margin-bottom: 10px;
+
+    
+
+            font-size: 0.9em;
+
+    
+
+            color: #888;
+
+    
+
+        }
+
+    
+
+    
+
+    
+
+    .ad-flex-container {
+
+    
+
+        display: flex;
+
+    
+
+        justify-content: center;
+
+    
+
+        align-items: center;
+
+    
+
+        gap: 20px;
+
+    
+
+        flex-wrap: wrap;
+
+    
 
     }
+
+    
+
+    
 
     
