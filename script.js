@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const jobCardTemplate = document.getElementById('job-card-template');
     const departureInput = document.getElementById('departure');
     const getLocationBtn = document.getElementById('get-location-btn');
-    const mainElement = document.querySelector('main');
 
     const MAX_JOBS = 3;
 
@@ -63,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         jobCardsContainer.appendChild(newCard);
         attachEventListeners(newCard);
         updateMapButtonState(newCard);
-        updateAdLayout(); // Update layout when a card is added
     }
 
     function attachEventListeners(card) {
@@ -216,25 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
         jobCardsContainer.innerHTML = '';
         cards.forEach(card => jobCardsContainer.appendChild(card));
     }
-
-    // --- Dynamic Ad Layout ---
-    function updateAdLayout() {
-        const cardCount = jobCardsContainer.children.length;
-        const screenWidth = window.innerWidth;
-
-        if (screenWidth >= 1200 && cardCount < 3) {
-            mainElement.classList.add('side-ad-layout');
-        } else {
-            mainElement.classList.remove('side-ad-layout');
-        }
-    }
-
-    // Watch for cards being added or removed
-    const observer = new MutationObserver(updateAdLayout);
-    observer.observe(jobCardsContainer, { childList: true });
-
-    // Update layout on window resize
-    window.addEventListener('resize', updateAdLayout);
 
     // --- Initial Load ---
     addJobCard();
