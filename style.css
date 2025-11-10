@@ -362,7 +362,15 @@ button:hover {
 
     
 
+    
+
+    
+
         display: flex;
+
+    
+
+    
 
     
 
@@ -370,7 +378,15 @@ button:hover {
 
     
 
+    
+
+    
+
         align-items: center;
+
+    
+
+    
 
     
 
@@ -378,11 +394,179 @@ button:hover {
 
     
 
+    
+
+    
+
         flex-wrap: wrap;
 
     
 
+    
+
+    
+
     }
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    /* Responsive layout for side ad on PC */
+
+    
+
+    
+
+    
+
+    @media (min-width: 1200px) {
+
+    
+
+    
+
+    
+
+        main.side-ad-layout {
+
+    
+
+    
+
+    
+
+            display: flex;
+
+    
+
+    
+
+    
+
+            align-items: flex-start;
+
+    
+
+    
+
+    
+
+            gap: 20px;
+
+    
+
+    
+
+    
+
+        }
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+        main.side-ad-layout #job-cards-container {
+
+    
+
+    
+
+    
+
+            flex-grow: 1;
+
+    
+
+    
+
+    
+
+        }
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+        main.side-ad-layout #bottom-ad {
+
+    
+
+    
+
+    
+
+            flex-shrink: 0;
+
+    
+
+    
+
+    
+
+            width: 480px; /* Adjust width as needed */
+
+    
+
+    
+
+    
+
+            margin-top: 0;
+
+    
+
+    
+
+    
+
+        }
+
+    
+
+    
+
+    
+
+    }
+
+    
+
+    
+
+    
+
+    
 
     
 
